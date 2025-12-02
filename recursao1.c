@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int calcularPotencia(int,int);
+
+int main() {
+
+    int x,y;
+
+    scanf("%d%d",&x,&y);
+
+    printf("%d\n",calcularPotencia(x,y));
+
+}
+
+int calcularPotencia(int x,int y) {
+
+    int result = 1;
+
+    if(y == 0){
+        return 1;
+    }
+
+    result = calcularPotencia(x,y-1);
+    result*=x;
+
+    return result;
+}
